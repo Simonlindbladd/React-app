@@ -13,11 +13,11 @@ const PhotoDetail = () => {
   const [photo, setPhoto] = useState<Photo | null>(null);
 
   useEffect(() => {
-    // Simulera en databas/fetch med statisk data
+    // Simulera en hämtning av data med riktiga bilder
     const photoData: Photo = {
       id: Number(id),
       title: `Bild ${id}`,
-      url: 'https://via.placeholder.com/600',
+      url: `https://picsum.photos/seed/pic${id}/600/400`,
       description: 'Detta är en detaljerad beskrivning av bilden.',
     };
     setPhoto(photoData);
