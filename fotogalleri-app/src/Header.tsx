@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <Link to="/">Hem</Link> | <Link to="/gallery">Galleri</Link>
+        <Link to="/">Home</Link> | <Link to="/gallery">Gallery</Link>
       </nav>
     </header>
   );

@@ -5,13 +5,6 @@ body {
   color: #000;
 }
 
-header, footer {
-  background: #333;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
 main {
   padding: 1rem;
 }
@@ -30,15 +23,15 @@ main {
   margin-bottom: 1rem;
 }
 
-
 .gallery {
-  max-width: 800px; 
-  margin: 0 auto;
+  max-width: 1000px;       
+  margin: 0 auto;          
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
-  padding: 0 1rem;
+  padding: 0 0.5rem;       
 }
+
 
 .photo-card {
   display: inline-block;     
@@ -60,4 +53,44 @@ main {
 
 .photo-card:hover {
   transform: scale(1.05);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: blue;
+  padding: 1rem;
+  text-align: center;
+  z-index: 1000;
+}
+
+header::before {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 2px;
+  background-color: blue;
+  margin: 0 auto 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: blue;
+  padding: 1rem;
+  text-align: center;
+  z-index: 1000;
+}
+
+footer::before {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 2px;
+  background-color: blue;
+  margin: 0 auto 10px;
 }
