@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { useMemo } from 'react';
 
 interface Photo {
   id: number;
@@ -11,10 +10,12 @@ interface Props {
   photo: Photo;
 }
 
+const getColSpan = (id: number) => {
+  return (id % 3) + 1;
+};
+
 const PhotoCard = ({ photo }: Props) => {
-  // Randomly choose a column span between 1 and 3.
-  // This will make some images wider than others.
-  const colSpan = useMemo(() => Math.floor(Math.random() * 3) + 1, []);
+  const colSpan = getColSpan(photo.id);
 
   return (
     <Link 

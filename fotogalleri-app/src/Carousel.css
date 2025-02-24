@@ -1,0 +1,35 @@
+/* Carousel.css */
+.carousel-container {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .carousel {
+    display: flex;
+    width: 200%;
+    animation: marquee 15s linear infinite;
+  }
+  
+  .carousel span {
+    display: block;
+    font-size: 6rem;
+    font-weight: bold;
+    color: blue;
+    white-space: nowrap;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
