@@ -3,9 +3,15 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <header>
-      <nav>
-        <Link to="/">Home</Link> | <Link to="/shop">Shop</Link>
-      </nav>
+      <div className="header-left">
+        <Link to="/">Home</Link>
+      </div>
+      <div className="header-center">
+        <Link to="/shop">Shop</Link>
+      </div>
+      <div className="header-right">
+        {/* This div is intentionally left blank */}
+      </div>
     </header>
   );
 };
