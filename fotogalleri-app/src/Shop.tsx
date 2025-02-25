@@ -1,7 +1,13 @@
-// src/Shop.tsx
+import { useState } from 'react';
 import './Shop.css';
 
 const Shop = () => {
+  const [cart, setCart] = useState<number>(0);
+
+  const addToCart = () => {
+    setCart(cart + 1);
+  };
+
   return (
     <div className="shop-container">
       <div className="shop-images">
@@ -22,7 +28,12 @@ const Shop = () => {
           This is a detailed description of the product. It includes features, specifications, and benefits.
         </p>
         <p className="price"><strong>Price: $99.99</strong></p>
-        <button>Add to Cart</button>
+        <button onClick={addToCart}>Add to Cart</button>
+        {cart > 0 && (
+          <div style={{ marginTop: '1rem', fontWeight: 'bold' }}>
+            Items in Basket: {cart}
+          </div>
+        )}
       </div>
     </div>
   );

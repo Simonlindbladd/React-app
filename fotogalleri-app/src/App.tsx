@@ -5,6 +5,7 @@ import Home from './Home';
 import Shop from './Shop';
 import PhotoDetail from './PhotoDetail';
 import Carousel from './Carousel';
+import Checkout from './Checkout';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/photo/:id" element={<PhotoDetail />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </main>
       <Footer />
