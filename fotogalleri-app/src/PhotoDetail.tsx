@@ -13,7 +13,6 @@ const PhotoDetail = () => {
   const [photo, setPhoto] = useState<Photo | null>(null);
 
   useEffect(() => {
-    // Simulera en hämtning av data med riktiga bilder
     const photoData: Photo = {
       id: Number(id),
       title: `Bild ${id}`,
