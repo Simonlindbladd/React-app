@@ -5,7 +5,6 @@ body {
   color: #000;
 }
 
-
 main {
   padding: 1rem;
 }
@@ -32,7 +31,6 @@ main {
   gap: 1rem;
   padding: 0 0.5rem;       
 }
-
 
 .photo-card {
   display: inline-block;     

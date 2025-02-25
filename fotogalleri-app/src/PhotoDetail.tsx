@@ -1,25 +1,15 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-
-interface Photo {
-  id: number;
-  title: string;
-  url: string;
-  description: string;
-}
+import { photos, Photo } from './Home';
 
 const PhotoDetail = () => {
   const { id } = useParams<{ id: string }>();
   const [photo, setPhoto] = useState<Photo | null>(null);
 
   useEffect(() => {
-    const photoData: Photo = {
-      id: Number(id),
-      title: `Bild ${id}`,
-      url: `https://picsum.photos/seed/pic${id}/600/400`,
-      description: 'Detta är en detaljerad beskrivning av bilden.',
-    };
-    setPhoto(photoData);
+    if (!id) return;
+    const foundPhoto = photos.find((p) => p.id === Number(id));
+    setPhoto(foundPhoto || null);
   }, [id]);
 
   if (!photo) return <p>Laddar bild...</p>;

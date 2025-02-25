@@ -12,7 +12,7 @@
   .carousel {
     display: flex;
     width: 200%;
-    animation: marquee 20s linear infinite;
+    animation: marquee 40s linear infinite;
   }
   
   .carousel span {
