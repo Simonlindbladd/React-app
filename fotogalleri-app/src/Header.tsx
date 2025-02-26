@@ -1,16 +1,60 @@
+// src/Header.tsx
 import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header>
-      <div className="header-left">
-        <Link to="/">Home</Link>
-      </div>
-      <div className="header-center">
-        <Link to="/shop">Shop</Link>
-      </div>
-      <div className="header-right">
-        {/* This div is intentionally left blank */}
+    <header
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        padding: '1rem 40px', 
+        zIndex: 1000,
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      {/* Blue line at the top */}
+      <div
+        style={{
+          width: '100%',
+          height: '2px',
+          backgroundColor: 'blue',
+          marginBottom: '10px',
+        }}
+      ></div>
+      {/* Button container */}
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'flex-start',
+        }}
+      >
+        <Link
+          to="/"
+          style={{
+            color: 'blue',
+            textDecoration: 'none',
+            fontSize: '1rem',
+            fontWeight: 'bold',
+          }}
+        >
+          Home
+        </Link>
+        <Link
+          to="/shop"
+          style={{
+            color: 'blue',
+            textDecoration: 'none',
+            fontSize: '1rem',
+            fontWeight: 'bold',
+            marginLeft: '600px', // Increase or decrease this value to change Shop's position
+          }}
+        >
+          Shop
+        </Link>
       </div>
     </header>
   );

@@ -54,38 +54,6 @@ main {
   transform: scale(1.05);
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: blue;
-  padding: 1rem;
-  text-align: center;
-  z-index: 1000;
-}
-
-header::before {
-  content: "";
-  display: block;
-  width: 90%;
-  height: 2px;
-  background-color: blue;
-  margin: 0 auto 10px;
-}
-
-header a {
-  color: blue;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: bold;
-  transition: opacity 0.3s ease;
-}
-
-header a:hover {
-  opacity: 0.6;
-}
-
 footer {
   position: fixed;
   bottom: 0;
