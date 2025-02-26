@@ -50,7 +50,7 @@ const Header = () => {
             textDecoration: 'none',
             fontSize: '1rem',
             fontWeight: 'bold',
-            marginLeft: '600px', // Increase or decrease this value to change Shop's position
+            marginLeft: '60vw', 
           }}
         >
           Shop

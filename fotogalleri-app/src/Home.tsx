@@ -1,5 +1,3 @@
-// src/Home.tsx
-import React from 'react';
 import PhotoCard from './PhotoCard';
 import img1 from './assets/img2.jpg';
 import img2 from './assets/img3.jpg';
