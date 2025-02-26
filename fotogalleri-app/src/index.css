@@ -23,14 +23,15 @@ main {
   margin-bottom: 1rem;
 }
 
+/* In your global CSS file */
 .gallery {
-  max-width: 1000px;       
-  margin: 0 auto;          
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  padding: 0 0.5rem;       
+  max-width: 1000px;
+  margin: 0 auto;
 }
+
 
 .photo-card {
   display: inline-block;     

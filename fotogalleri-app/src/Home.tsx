@@ -1,3 +1,4 @@
+// src/Home.tsx
 import PhotoCard from './PhotoCard';
 import img1 from './assets/img2.jpg';
 import img2 from './assets/img3.jpg';
@@ -27,15 +28,17 @@ type FilmItem = { type: 'film' };
 type PhotoItem = { type: 'photo'; data: Photo };
 type GalleryItem = FilmItem | PhotoItem;
 
-// Fixed ordering: insert a film at position 3 and another at position 6.
+// Fixed ordering in a 4-column grid:
+// - Positions 1,2,4,5,8 are photos.
+// - Insert a film item as the 3rd element and another as the 7th element.
 const galleryItems: GalleryItem[] = [
   { type: 'photo', data: photos[0] },
   { type: 'photo', data: photos[1] },
   { type: 'film' },
   { type: 'photo', data: photos[2] },
   { type: 'photo', data: photos[3] },
-  { type: 'film' },
   { type: 'photo', data: photos[4] },
+  { type: 'film' },
   { type: 'photo', data: photos[5] },
 ];
 
