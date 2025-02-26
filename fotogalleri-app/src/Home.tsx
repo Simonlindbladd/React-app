@@ -7,6 +7,7 @@ import img4 from './assets/img3.jpg';
 import img5 from './assets/img2.jpg';
 import img6 from './assets/img3.jpg';
 import film1 from './assets/film1.mp4';
+import film2 from './assets/film2.mp4';
 
 export interface Photo {
   id: number;
@@ -24,39 +25,50 @@ export const photos: Photo[] = [
   { id: 6, title: 'Bild 6', url: img6, description: 'Description for Bild 6' },
 ];
 
-type FilmItem = { type: 'film' };
+type FilmItem = { type: 'film'; video: string };
 type PhotoItem = { type: 'photo'; data: Photo };
 type GalleryItem = FilmItem | PhotoItem;
 
-// Fixed ordering in a 4-column grid:
-// - Positions 1,2,4,5,8 are photos.
-// - Insert a film item as the 3rd element and another as the 7th element.
+// Fixed ordering for a 5-column grid:
+// Row 1: Photo 1, Film1, Photo 2, Film2, Photo 3
+// Row 2: Photo 4, Film1, Photo 5, Film2, Photo 6
 const galleryItems: GalleryItem[] = [
   { type: 'photo', data: photos[0] },
+  { type: 'film', video: film1 },
   { type: 'photo', data: photos[1] },
-  { type: 'film' },
+  { type: 'film', video: film2 },
   { type: 'photo', data: photos[2] },
   { type: 'photo', data: photos[3] },
+  { type: 'film', video: film1 },
   { type: 'photo', data: photos[4] },
-  { type: 'film' },
+  { type: 'film', video: film2 },
   { type: 'photo', data: photos[5] },
 ];
 
 const Home = () => {
   return (
     <div>
-      <section className="intro">
+      <section className="intro" style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <h1>Gallery</h1>
         <p>Discover photos</p>
       </section>
 
       <section className="gallery-section">
-        <div className="gallery">
+        <div
+          className="gallery"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(5, 1fr)',
+            gap: '1rem',
+            maxWidth: '1200px',
+            margin: '0 auto',
+          }}
+        >
           {galleryItems.map((item, index) =>
             item.type === 'film' ? (
               <div key={`film-${index}`} className="film-card">
                 <video
-                  src={film1}
+                  src={item.video}
                   autoPlay
                   muted
                   loop
