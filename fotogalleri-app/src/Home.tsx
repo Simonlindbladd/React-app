@@ -1,4 +1,3 @@
-// src/Home.tsx
 import PhotoCard from './PhotoCard';
 import img1 from './assets/img2.jpg';
 import img2 from './assets/img3.jpg';
@@ -17,19 +16,18 @@ export interface Photo {
 }
 
 export const photos: Photo[] = [
-  { id: 1, title: 'Bild 1', url: img1, description: 'Description for Bild 1' },
-  { id: 2, title: 'Bild 2', url: img2, description: 'Description for Bild 2' },
-  { id: 3, title: 'Bild 3', url: img3, description: 'Description for Bild 3' },
-  { id: 4, title: 'Bild 4', url: img4, description: 'Description for Bild 4' },
-  { id: 5, title: 'Bild 5', url: img5, description: 'Description for Bild 5' },
-  { id: 6, title: 'Bild 6', url: img6, description: 'Description for Bild 6' },
+  { id: 1, title: 'Bild 1', url: img1, description: 'En bild' },
+  { id: 2, title: 'Bild 2', url: img2, description: 'En bild' },
+  { id: 3, title: 'Bild 3', url: img3, description: 'En bild' },
+  { id: 4, title: 'Bild 4', url: img4, description: 'En bild' },
+  { id: 5, title: 'Bild 5', url: img5, description: 'En bild' },
+  { id: 6, title: 'Bild 6', url: img6, description: 'En bild' },
 ];
 
 type FilmItem = { type: 'film'; video: string };
 type PhotoItem = { type: 'photo'; data: Photo };
 type GalleryItem = FilmItem | PhotoItem;
 
-// Fixed ordering for a 5-column grid:
 // Row 1: Photo 1, Film1, Photo 2, Film2, Photo 3
 // Row 2: Photo 4, Film1, Photo 5, Film2, Photo 6
 const galleryItems: GalleryItem[] = [
@@ -48,10 +46,23 @@ const galleryItems: GalleryItem[] = [
 const Home = () => {
   return (
     <div>
-      <section className="intro" style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <h1>Gallery</h1>
-        <p>Discover photos</p>
-      </section>
+     
+     <section className="intro" style={{ textAlign: 'center', marginBottom: '2rem' }}>
+  <div
+    className="logo"
+    style={{
+      fontSize: '4rem',
+      fontWeight: 'bold',
+      color: 'blue',
+      marginBottom: '1rem'
+    }}
+  >
+    Gallery
+  </div>
+  <p style={{ fontSize: '1.2rem' }}>-Discover photos-</p>
+</section>
+
+
 
       <section className="gallery-section">
         <div

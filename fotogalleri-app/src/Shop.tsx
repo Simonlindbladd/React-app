@@ -1,4 +1,3 @@
-// src/Shop.tsx
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import productMain from './assets/img2.jpg'; // Main product image
