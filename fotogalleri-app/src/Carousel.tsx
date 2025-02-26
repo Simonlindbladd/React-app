@@ -1,4 +1,3 @@
-// Carousel.tsx
 import "./Carousel.css";
 
 const Carousel = () => {

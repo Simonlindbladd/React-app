@@ -1,6 +1,11 @@
+import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
 const Checkout = () => {
+  // Retrieve the passed cart count from the location state
+  const location = useLocation();
+  const cartCount = location.state?.cart || 0;
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,13 +21,16 @@ const Checkout = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Checkout Data:', formData);
+    console.log('Checkout Data:', formData, 'Cart Items:', cartCount);
     alert('Order submitted! (Demo)');
   };
 
   return (
     <div style={{ padding: '2rem', maxWidth: '500px', margin: '0 auto' }}>
       <h2>Checkout</h2>
+      {cartCount > 0 && (
+        <p style={{ fontWeight: 'bold' }}>Items in Basket: {cartCount}</p>
+      )}
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: '1rem' }}>
           <label htmlFor="name">Name:</label><br />

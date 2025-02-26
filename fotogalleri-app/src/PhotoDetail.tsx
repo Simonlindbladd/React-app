@@ -12,7 +12,7 @@ const PhotoDetail = () => {
     setPhoto(foundPhoto || null);
   }, [id]);
 
-  if (!photo) return <p>Laddar bild...</p>;
+  if (!photo) return <p>Loading...</p>;
 
   return (
     <div>

@@ -1,11 +1,17 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Shop.css';
 
 const Shop = () => {
   const [cart, setCart] = useState<number>(0);
+  const navigate = useNavigate();
 
   const addToCart = () => {
     setCart(cart + 1);
+  };
+
+  const handleCheckout = () => {
+    navigate('/checkout', { state: { cart } });
   };
 
   return (
@@ -27,11 +33,16 @@ const Shop = () => {
         <p>
           This is a detailed description of the product. It includes features, specifications, and benefits.
         </p>
-        <p className="price"><strong>Price: $99.99</strong></p>
+        <p className="price"><strong>Price: $29.99</strong></p>
         <button onClick={addToCart}>Add to Cart</button>
         {cart > 0 && (
-          <div style={{ marginTop: '1rem', fontWeight: 'bold' }}>
-            Items in Basket: {cart}
+          <div style={{ marginTop: '1rem' }}>
+            <div style={{ fontWeight: 'bold' }}>
+              Items in Basket: {cart}
+            </div>
+            <button onClick={handleCheckout} style={{ marginTop: '1rem' }}>
+              Proceed to Checkout
+            </button>
           </div>
         )}
       </div>
