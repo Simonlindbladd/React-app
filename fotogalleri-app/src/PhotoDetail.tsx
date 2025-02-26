@@ -1,3 +1,4 @@
+// src/PhotoDetail.tsx
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { photos, Photo } from './Home';
@@ -12,13 +13,24 @@ const PhotoDetail = () => {
     setPhoto(foundPhoto || null);
   }, [id]);
 
-  if (!photo) return <p>Loading...</p>;
+  if (!photo) return <p>Laddar bild...</p>;
 
   return (
-    <div>
-      <h1>{photo.title}</h1>
-      <img src={photo.url} alt={photo.title} />
-      <p>{photo.description}</p>
+    <div style={{ padding: '1rem', textAlign: 'center' }}>
+      <img
+        src={photo.url}
+        alt={photo.title}
+        style={{
+          maxWidth: '400px',
+          width: '100%',
+          height: 'auto',
+          margin: '310px auto 0',
+          display: 'block',
+        }}
+      />
+      <p style={{ marginTop: '20px', fontSize: '1.2rem', color: '#333' }}>
+        {photo.description}
+      </p>
     </div>
   );
 };

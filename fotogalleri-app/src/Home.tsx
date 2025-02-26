@@ -27,12 +27,12 @@ const Home = () => {
   return (
     <div>
       <section className="intro">
-        <h1>Welcome to the Photo Gallery</h1>
-        <p>Discover a curated collection of beautiful images.</p>
+        <h1>Gallery</h1>
+        <p>Discover photos</p>
       </section>
 
       <section className="gallery-section">
-        <h2>Gallery</h2>
+       
         <div className="gallery">
           {photos.map((photo) => (
             <PhotoCard key={photo.id} photo={photo} />
