@@ -74,3 +74,12 @@ footer::before {
   margin: 0 auto 10px;
 }
 
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
