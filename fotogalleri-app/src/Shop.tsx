@@ -41,9 +41,9 @@ const Shop = () => {
       <div className="shop-info">
         <h1>Awesome Product</h1>
         <p>
-          This is a detailed description of the product. It includes features, specifications, and benefits.
+          This is a description of the product image...
         </p>
-        <p className="price"><strong>Price: $99.99</strong></p>
+        <p className="price"><strong>Price: $29.99</strong></p>
         <button onClick={addToCart}>Add to Cart</button>
         {cart > 0 && (
           <div style={{ marginTop: '1rem' }}>
