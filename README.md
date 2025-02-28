@@ -5,17 +5,14 @@ npm install
 
 Starta server 
 kör:
-dir
-
-och kör sedan:
-cd .\fotogalleri-app\
+npm install 
 
 och kör sedan:
 npm run dev
 
 
 
-- https://react-galley.netlify.app/ länk till netlify appen. dock har jag inte köpt en domän så får ej tillgång till den.
+- https://react-gallery-app-simon.netlify.app/ länk till sidan
 
 Krav för godkänt:
 
