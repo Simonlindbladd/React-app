@@ -8,7 +8,7 @@ const Header = () => {
         top: 0,
         left: 0,
         width: '100%',
-        padding: '1rem 40px', // Keeps spacing balanced
+        padding: '1rem 40px', 
         zIndex: 1000,
         display: 'flex',
         flexDirection: 'column',
@@ -48,7 +48,7 @@ const Header = () => {
             textDecoration: 'none',
             fontSize: '1rem',
             fontWeight: 'bold',
-            marginLeft: '50vw', // Slightly less than before
+            marginLeft: '50vw', 
           }}
         >
           Shop

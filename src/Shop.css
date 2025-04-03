@@ -11,7 +11,7 @@
 
 @media (max-width: 400px) {
   .shop-container {
-      grid-template-columns: 1fr; /* Stack elements vertically */
+      grid-template-columns: 1fr; 
       padding: 1rem;
   }
 }
@@ -24,7 +24,7 @@
 
 .main-image {
   width: 100%;
-  max-width: 360px; /* Ensure it fits on small screens */
+  max-width: 360px; 
   border-radius: 5px;
   margin-bottom: 1rem;
 }
@@ -36,7 +36,7 @@
 }
 
 .thumbnails img {
-  width: 80px; /* Slightly smaller for mobile */
+  width: 80px; 
   border-radius: 5px;
   cursor: pointer;
 }
@@ -76,6 +76,6 @@
 
 @media (max-width: 400px) {
   .shop-info button {
-      width: 100%; /* Make buttons full-width for small screens */
+      width: 100%; 
   }
 }
