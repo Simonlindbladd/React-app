@@ -8,13 +8,12 @@ const Header = () => {
         top: 0,
         left: 0,
         width: '100%',
-        padding: '1rem 40px', 
+        padding: '1rem 40px', // Keeps spacing balanced
         zIndex: 1000,
         display: 'flex',
         flexDirection: 'column',
       }}
     >
-      {/* Blue line at the top */}
       <div
         style={{
           width: '100%',
@@ -23,7 +22,7 @@ const Header = () => {
           marginBottom: '10px',
         }}
       ></div>
-      {/* Button container */}
+      
       <div
         style={{
           display: 'flex',
@@ -49,7 +48,7 @@ const Header = () => {
             textDecoration: 'none',
             fontSize: '1rem',
             fontWeight: 'bold',
-            marginLeft: '60vw', 
+            marginLeft: '50vw', // Slightly less than before
           }}
         >
           Shop
